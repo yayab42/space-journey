@@ -19,8 +19,8 @@ class CreateOrdersTable extends Migration
             $table->dateTime('delivery_date');
             $table->integer ('number');
             $table->timestamps();
-            $table->foreignId('users_id');
-            $table->foreign('users_id')->references('id')->on('users');
+            $table->foreignId('usernames_id');
+            $table->foreign('usernames_id')->references('id')->on('usernames');
         });
 
     }
