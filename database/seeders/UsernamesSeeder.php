@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Username;
 use Illuminate\Database\Seeder;
 
 class UsernamesSeeder extends Seeder
@@ -13,6 +14,8 @@ class UsernamesSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Username::factory()
+            ->count(10)
+            ->create();
     }
 }
