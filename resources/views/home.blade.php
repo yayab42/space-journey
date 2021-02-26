@@ -1,6 +1,3 @@
-bonjour
-
-
 <html lang="fr">
 
 <head>
@@ -24,32 +21,32 @@ bonjour
             </button>
             <div class="collapse navbar-collapse col-lg-4 justify-content-around" id="navbarCenteredExample">
                 <div class="nav-item">
-                    <a href="/" class="img-hover-zoom">
-                        <img class="nav-link" src="/img/shop.svg" alt="shop">
+                    <a href="/">
+                        <img class="nav-link img-hover-zoom" src="/img/shop.svg" alt="shop">
                     </a>
                 </div>
                 <div class="nav-item">
-                    <a href="" class="img-hover-zoom">
-                        <img class="nav-link" src="/img/aboutus.svg" alt="about">
+                    <a href="/">
+                        <img class="nav-link img-hover-zoom" src="/img/aboutus.svg" alt="about">
                     </a>
                 </div>
             </div>
             <div class=" col-4">
-                <a href="/" class="img-hover-zoom">
+                <a href="/">
 
-                    <img class="nav-link img-fluid" src="/img/logo.svg" alt="logo">
+                    <img class="nav-link img-fluid img-hover-zoom" src="/img/logo.svg" alt="logo">
                 </a>
 
             </div>
             <div class="collapse navbar-collapse col-lg-4 justify-content-around" id="navbarCenteredExample">
                 <div class="nav-item">
-                    <a href="" class="img-hover-zoom">
-                        <img class="nav-link" src="/img/login.svg" alt="login">
+                    <a href="/">
+                        <img class="nav-link img-hover-zoom" src="/img/login.svg" alt="login">
                     </a>
                 </div>
                 <div class="nav-item">
-                    <a href="" class="img-hover-zoom">
-                        <img class="nav-link" src="/img/Panier.svg" alt="panier">
+                    <a href="/">
+                        <img class="nav-link img-hover-zoom" src="/img/Panier.svg" alt="panier">
                     </a>
                 </div>
             </div>
@@ -63,16 +60,13 @@ bonjour
     <div id="carouselControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="..." alt="First slide">
+                <img class="d-block w-100" src="/img/caroussel1.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="..." alt="Second slide">
+                <img class="d-block w-100" src="/img/caroussel2.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="..." alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="..." alt="Third slide">
+                <img class="d-block w-100" src="/img/caroussel3.jpg" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
@@ -88,7 +82,7 @@ bonjour
     <div class="container pt-5 pb-5">
 
 
-        <h1 class="text-center pb-5 img-hover-zoom">Nos destinations</h1>
+        <h1 class="text-center pb-5">Nos destinations</h1>
         <p class="text-justify pb-5 ">Hello jeune terrien ! Vous êtes un backpacker de l’extrème et vous avez soif
             d’aventure ? Vous trouvez les destinations terriennes fades ?
             <br> Découvrez notrer selection de voyage dans les contrès les plus incroyables de la galaxie.
