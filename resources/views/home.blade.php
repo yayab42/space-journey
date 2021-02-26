@@ -92,13 +92,13 @@ bonjour
 
 
         <div class="row">
-            @forelse ($products as $product)
+            @forelse ($products as $row)
                 <div class="col-lg-6">
                     <article>
                         <header>
                             <img src="" alt="">
                         </header>
-                        <a href="#"><h4 class="text-center">{{ $product->title }}</h4></a>
+                        <a href="#"><h4 class="text-center">{{ $row->title }}</h4></a>
                     </article>
                 </div>
             @empty
