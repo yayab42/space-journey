@@ -1,6 +1,3 @@
-coucou
-
-
 <html lang="fr">
 
 <head>
@@ -88,7 +85,7 @@ coucou
     <div class="container pt-5 pb-5">
 
 
-        <h1 class="text-center pb-5 img-hover-zoom">Produit</h1>
+        <h1 class="text-center pb-5 img-hover-zoom">{{$oneProduct->title}}</h1>
 
         <div class="row">
             <div class="col-lg-6">
@@ -96,11 +93,9 @@ coucou
             </div>
 
             <div class="col-lg-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi impedit veniam odit soluta, nobis
-                    quis reprehenderit ex, repellat asperiores eum ut aperiam harum quaerat consectetur totam iure odio
-                    eaque itaque!
+                <p>{{$oneProduct->description}}
                 </p>
-                <p>10 000€</p>
+                <p>{{$oneProduct->price_ht + ($oneProduct->price_ht * $oneProduct->vat) / 100}} €</p>
                 <form action="#" method="POST">
                     <div class="form-group">
 
