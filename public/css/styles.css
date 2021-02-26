@@ -1,0 +1,29 @@
+p, h1, h2, h3, h4, h5, li, a{
+    color: white;
+}
+
+.background-black, nav, header, main{
+    background-color: black;
+}
+
+footer{
+    background-color: rgba(232, 232, 232, 1);
+}
+
+
+.img-hover-zoom {
+    transform-origin: 50% 65%;
+    transition: transform 3s, filter 1s ease-in-out;
+    filter: brightness(150%);
+}
+
+/* The Transformation */
+.img-hover-zoom:hover {
+    filter: brightness(100%);
+    transform: scale(1.5);
+}
+
+.decouvrir-btn{
+    padding: 5px 20px;
+    border: solid 1px white;
+}

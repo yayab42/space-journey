@@ -9,7 +9,7 @@ bonjour
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
     <title>Space Journey</title>
 </head>
 
@@ -24,28 +24,32 @@ bonjour
             </button>
             <div class="collapse navbar-collapse col-lg-4 justify-content-around" id="navbarCenteredExample">
                 <div class="nav-item">
-                    <a href="" class="img-hover-zoom">
-                        <p class="nav-link text-center">Logo home</p>
+                    <a href="/" class="img-hover-zoom">
+                        <img class="nav-link" src="/img/shop.svg" alt="shop">
                     </a>
                 </div>
                 <div class="nav-item">
                     <a href="" class="img-hover-zoom">
-                        <p class="nav-link text-center">logo A propos</p>
+                        <img class="nav-link" src="/img/aboutus.svg" alt="about">
                     </a>
                 </div>
             </div>
             <div class=" col-4">
-                <p class="text-center">Logo SJ</p>
+                <a href="/" class="img-hover-zoom">
+
+                    <img class="nav-link img-fluid" src="/img/logo.svg" alt="logo">
+                </a>
+
             </div>
             <div class="collapse navbar-collapse col-lg-4 justify-content-around" id="navbarCenteredExample">
                 <div class="nav-item">
                     <a href="" class="img-hover-zoom">
-                        <p class="nav-link text-center">logo login</p>
+                        <img class="nav-link" src="/img/login.svg" alt="login">
                     </a>
                 </div>
                 <div class="nav-item">
                     <a href="" class="img-hover-zoom">
-                        <p class="nav-link text-center img-hover-zoom">logo panier</p>
+                        <img class="nav-link" src="/img/Panier.svg" alt="panier">
                     </a>
                 </div>
             </div>
@@ -138,26 +142,26 @@ bonjour
 
         <div class="row">
             <div class="col-lg-3 col-6">
-                <img src="" alt="">
+                <img src="/img/love.svg" alt="">
                 <p class="text-center">
                     18% de nos acheteurs satisfaits
                 </p>
             </div>
 
             <div class="col-lg-3 col-6">
-                <img src="" alt="">
+                <img src="/img/bitcoin.svg" alt="">
                 <p class="text-center">
                     Paiement en jeton spatial sécurié </p>
             </div>
 
             <div class="col-lg-3 col-6">
-                <img src="" alt="">
+                <img src="/img/green.svg" alt="">
                 <p class="text-center">
                     Fusés respectueuses de la galaxie </p>
             </div>
 
             <div class="col-lg-3 col-6">
-                <img src="" alt="">
+                <img src="/img/safe.svg" alt="" class="img-fluid">
                 <p class="text-center">
                     Seulement 56% de taux d’accidents </p>
             </div>
