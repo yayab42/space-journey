@@ -12,7 +12,7 @@
     </thead>
     <tbody>
 {{--    Si $Session n'est pas vide alors on fait un foreach on parcourt le tableau avec toutes les données --}}
-
+<?=$addtocart?>
     <tr>
         <td>Image</td>
         <td>

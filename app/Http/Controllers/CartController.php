@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -16,9 +17,10 @@ class CartController extends Controller
         // ICI LA VUE
     }
 
-    public function addToCart()
+    public function addToCart($id)
     {
-        //add to cart
+        $product = Product::find($id);
+        return view('cart',[ 'addtocart'=>$product]);
     }
 
     /**
@@ -55,7 +57,7 @@ class CartController extends Controller
     public function destroy($id)
     {
         //
-
+    }
     public function show() {
         return view('cart');
 
