@@ -17,10 +17,16 @@ class CartController extends Controller
         // ICI LA VUE
     }
 
+    public function store(Request $request)
+    {
+        $input = $request->all();
+        //dd($input);
+        return view('cart',[ 'addtocart'=>$input]);
+    }
+
     public function addToCart($id)
     {
-        $product = Product::find($id);
-        return view('cart',[ 'addtocart'=>$product]);
+        //
     }
 
     /**

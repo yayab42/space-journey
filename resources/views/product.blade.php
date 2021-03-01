@@ -41,7 +41,8 @@
                 <p>{{$product->description}}
                 </p>
                 <p>{{$product->price_with_vat}} €</p>
-                <form action="#" method="POST">
+                <form action="/cart" method="POST">
+                    {{ csrf_field() }}
                     <div class="form-group">
 
                         <label for="quantity">Quantité</label>
@@ -56,6 +57,7 @@
                     </div>
 
                     <div class="form-group">
+                        <input type="hidden" value="{{$product->id}}" name="id" >
                         <input type="submit" value="Ajouter au panier">
                     </div>
                 </form>
