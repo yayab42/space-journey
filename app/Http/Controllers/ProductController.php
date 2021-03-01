@@ -13,10 +13,9 @@ class ProductController extends Controller
 
 {
 
-    public function show($id)
+    public function show(Product $product)
     {
-        $oneProduct = Product::find($id);
-        return view('product', ['oneProduct' => $oneProduct]);
+        return view('product', ['product' => $product]);
     }
 
 }

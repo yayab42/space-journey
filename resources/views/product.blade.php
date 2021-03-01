@@ -85,7 +85,7 @@
     <div class="container pt-5 pb-5">
 
 
-        <h1 class="text-center pb-5 img-hover-zoom">{{$oneProduct->title}}</h1>
+        <h1 class="text-center pb-5 img-hover-zoom">{{$product->title}}</h1>
 
         <div class="row">
             <div class="col-lg-6">
@@ -93,9 +93,9 @@
             </div>
 
             <div class="col-lg-6">
-                <p>{{$oneProduct->description}}
+                <p>{{$product->description}}
                 </p>
-                <p>{{$oneProduct->price_ht + ($oneProduct->price_ht * $oneProduct->vat) / 100}} €</p>
+                <p>{{$product->price_with_vat}} €</p>
                 <form action="#" method="POST">
                     <div class="form-group">
 
@@ -165,6 +165,6 @@
 
 <?PHP
 
-dd($oneProduct);
+dd($product);
 
 ?>
