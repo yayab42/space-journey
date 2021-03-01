@@ -19,3 +19,5 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('product/{product}',[ProductController::class,'show']);
 
+Route::get('addtocart{id}' , [CartController::class,''])
+
