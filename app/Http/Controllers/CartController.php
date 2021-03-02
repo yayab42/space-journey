@@ -21,8 +21,9 @@ class CartController extends Controller
     {
         $input = $request->all();
         //dd($input);
-        return view('cart',[ 'addtocart'=>$input]);
-    }
+        session()->push('cart',$input);
+        return redirect()->action([CartController::class,'show']);
+        }
 
     public function addToCart($id)
     {
@@ -51,7 +52,7 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**

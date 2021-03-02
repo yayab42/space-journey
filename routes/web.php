@@ -19,5 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('product/{product}',[ProductController::class,'show']);
 Route::post('cart',[CartController::class,'store']);
+Route::get('cart',[CartController::class,'show']);
 //Route::get('addtocart/{id}' , [CartController::class,'addToCart']);
 
