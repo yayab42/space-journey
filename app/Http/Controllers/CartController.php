@@ -11,9 +11,11 @@ class CartController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function index()
+    public function index(Product $product)
     {
+
         return view('cart');
+
     }
 
     public function initCart()
@@ -34,6 +36,8 @@ class CartController extends Controller
         } else {
             $cart[$id] = $quantity;
         }
+
+        session()->put('cart', $cart);
 
         return redirect()->action([CartController::class, 'index']);
     }
