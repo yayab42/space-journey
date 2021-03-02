@@ -38,7 +38,6 @@ class CartController extends Controller
         return redirect()->action([CartController::class, 'index']);
     }
 
-
     public function addToCart($id)
     {
         //
@@ -66,7 +65,7 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
