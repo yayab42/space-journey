@@ -14,11 +14,7 @@
             </thead>
             <tbody>
             {{--    Si $Session n'est pas vide alors on fait un foreach on parcourt le tableau avec toutes les données --}}
-<<<<<<< HEAD
 
-=======
-<?php var_dump(session('cart'))?>
->>>>>>> 2229d81f8d8535073295381be718654134db6163
             <tr>
                 <td>Image</td>
                 <td>
