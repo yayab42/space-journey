@@ -42,7 +42,7 @@
                 </p>
                 <p>{{$product->price_with_vat}} €</p>
                 <form action="/cart" method="POST">
-                    {{ csrf_field() }}
+                    @csrf
                     <div class="form-group">
 
                         <label for="quantity">Quantité</label>

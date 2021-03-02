@@ -8,21 +8,36 @@ use Illuminate\Http\Request;
 class CartController extends Controller
 {
     /**
-     * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index()
     {
-        // ICI LA VUE
+        return view('cart');
+    }
+
+    public function initCart()
+    {
+        //
     }
 
     public function store(Request $request)
     {
-        $input = $request->all();
-        //dd($input);
-        return view('cart',[ 'addtocart'=>$input]);
+
+        $id = $request->input('id');
+        $quantity = $request->input('quantity');
+
+        $cart = session('cart');
+
+        if (isset($cart[$id])) {
+            $cart[$id] += $quantity;
+        } else {
+            $cart[$id] = $quantity;
+        }
+
+        return redirect()->action([CartController::class, 'index']);
     }
+
 
     public function addToCart($id)
     {
@@ -32,7 +47,7 @@ class CartController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
 
@@ -45,8 +60,8 @@ class CartController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -57,15 +72,20 @@ class CartController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
         //
     }
-    public function show() {
-        return view('cart');
 
+    public function show()
+    {
+        //
     }
 }
+
+
+
+
