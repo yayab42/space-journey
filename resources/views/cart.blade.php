@@ -15,20 +15,25 @@
             <tbody>
             {{--    Si $Session n'est pas vide alors on fait un foreach on parcourt le tableau avec toutes les données --}}
 
+            @if(!empty($cartArray))
+                @foreach($cartArray as $key => $value)
+
             <tr>
                 <td>Image</td>
                 <td>
-                    {{--            Le titre--}}
+                    {{$value['product']->title}}
                 </td>
                 <td>
-                    {{--            Prix du produit TTC--}}
+
                 </td>
                 <td>
                     {{--            Quantité --}}</td>
                 <td>
                     {{--            Total d'un produit --}}</td>
             </tr>
-            {{-- Fin du foreach--}}
+{{--             Fin du foreach--}}
+                @endforeach
+            @endif
             <h1></h1>
             </tbody>
         </table>

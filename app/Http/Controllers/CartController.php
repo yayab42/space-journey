@@ -13,8 +13,19 @@ class CartController extends Controller
      */
     public function index(Product $product)
     {
+        $cart = session('cart');
+        $cartArray = [];
 
-        return view('cart');
+        foreach ($cart as $id => $qte) {
+            $product = Product::find($id);
+            $cartArray[] = [
+                'product' => $product,
+                'quantity' => $qte,
+                'priceWithVat' => ($qte * $product->PriceWithVat)
+            ];
+        }
+
+        return view('cart', ['cartArray' => $cartArray]);
 
     }
 
@@ -38,6 +49,7 @@ class CartController extends Controller
         }
 
         session()->put('cart', $cart);
+        var_dump(session('cart'));
 
         return redirect()->action([CartController::class, 'index']);
     }
