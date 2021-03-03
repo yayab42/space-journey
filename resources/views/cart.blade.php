@@ -24,14 +24,13 @@
                     {{$value['product']->title}}
                 </td>
                 <td>
-
+                    {{$value['product']->PriceWithVat}}
                 </td>
                 <td>
-                    {{--            Quantité --}}</td>
+                    {{$value['quantity']}}</td>
                 <td>
-                    {{--            Total d'un produit --}}</td>
+                    {{$value['totalPriceWithVat']}}</td>
             </tr>
-{{--             Fin du foreach--}}
                 @endforeach
             @endif
             <h1></h1>
@@ -40,8 +39,8 @@
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-2">
-                    <p>
-                        {{--                Total de tous les produits --}}
+                    <p class="text-dark">
+                        prix total
                     </p>
                     <form action="" method="post">
                         <input class="btn btn-success" type="button" value="Valider le panier" name="submitCart">

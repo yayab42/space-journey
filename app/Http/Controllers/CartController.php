@@ -18,10 +18,12 @@ class CartController extends Controller
 
         foreach ($cart as $id => $qte) {
             $product = Product::find($id);
+            $totalPriceCart = 0;
             $cartArray[] = [
                 'product' => $product,
                 'quantity' => $qte,
-                'priceWithVat' => ($qte * $product->PriceWithVat)
+                'totalPriceWithVat' => ($qte * $product->PriceWithVat),
+                'totalPriceCart' => $totalPriceCart += ($qte * $product->PriceWithVat),
             ];
         }
 
