@@ -13,6 +13,7 @@ class CartController extends Controller
      */
     public function index(Product $product)
     {
+
         // Récupération de l''id' et 'quantity' stocké dans session
         $cart = session('cart');
         $cartArray = [];
@@ -104,14 +105,20 @@ class CartController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Request $request)
     {
-        //
+        $id = $request->input('id');
+        $cart = $request->session()->get('cart');
+        unset($cart[$id]);
+        $request->session()->put('cart', $cart);
+
+        return redirect()->action([CartController::class, 'index']);
     }
 
-    public function show()
+    public function destroy(Request $request)
     {
-        //
+        $request->session()->flush();
+        return redirect()->action([CartController::class, 'index']);
     }
 }
 

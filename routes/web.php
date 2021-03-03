@@ -26,6 +26,10 @@ Route::post('cart',[CartController::class,'store']);
 Route::get('cart' , [CartController::class,'index']);
 //Route pour modifier le panier
 Route::post('cartUpdate',[CartController::class, 'update']);
+//Route pour supprimer le panier
+Route::delete('cart',[CartController::class, 'delete'])
+    ->name('cartDelete');
+Route::post('cart/destroy',[CartController::class, 'destroy']);
 
 
 
