@@ -60,7 +60,6 @@ class CartController extends Controller
         }
 
         session()->put('cart', $cart);
-        var_dump(session('cart'));
 
         return redirect()->action([CartController::class, 'index']);
     }
@@ -83,16 +82,20 @@ class CartController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //UPDATE
+        $cart = session('cart');
+        $id = $request->input('id');
+        $newQuantity = $request->input('quantity');
+        $update = $request->input('modifier');
+        if(isset($update)){
+            $cart[$id] = $newQuantity;
+            session()->put('cart', $cart);
+            if ($newQuantity==0){
+                //delete($id);
+            }
+    }
+        return redirect()->action([CartController::class, 'index']);
     }
 
     /**

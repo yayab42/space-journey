@@ -20,19 +20,29 @@
             @elseif(!empty($cartArray))
                 @foreach($cartArray as $key => $value)
 
-            <tr>
-                <td>Image</td>
-                <td>
-                    {{$value['product']->title}}
-                </td>
-                <td>
-                    {{$value['product']->PriceWithVat}} €
-                </td>
-                <td>
-                    {{$value['quantity']}}</td>
-                <td>
-                    {{$value['totalPriceWithVat']}} €</td>
-            </tr>
+                    <tr>
+                        <td>Image</td>
+                        <td>
+                            {{$value['product']->title}}
+                        </td>
+                        <td>
+                            {{$value['product']->PriceWithVat}} €
+                        </td>
+                        <td>
+                            <form method="post" action="/cartUpdate">
+                                @csrf
+                                <input type="hidden" value="{{$value['product']->id}}" name="id">
+                                <input type="number" id="quantity" name="quantity" min="0"
+                                       value=" {{$value['quantity']}}" placeholder="{{$value['quantity']}}">
+                                <input name="modifier" id="modifier" type="submit" class="btn btn-info"
+                                       value="Modifier">
+                            </form>
+                        </td>
+
+                        <td>
+                            {{$value['totalPriceWithVat']}} €
+                        </td>
+                    </tr>
                 @endforeach
             @endif
             <h1></h1>

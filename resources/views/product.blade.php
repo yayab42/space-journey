@@ -45,15 +45,8 @@
                     @csrf
                     <div class="form-group">
 
-                        <label for="quantity">Quantité</label>
-                        <select name="quantity" id="quantity">
-                            <option value="">Chosir</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                        <label class="text-white" for="quantity">Quantité</label>
+                        <input type="number" name="quantity" id="quantity" min="0" placeholder="0">
                     </div>
 
                     <div class="form-group">
