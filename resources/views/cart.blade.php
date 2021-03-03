@@ -10,6 +10,7 @@
                 <th scope="col">Prix Unitaire</th>
                 <th scope="col"> Quantité</th>
                 <th scope="col"> Total</th>
+                <th scope="col"></th>
             </tr>
             </thead>
             <tbody>
@@ -32,6 +33,14 @@
                     {{$value['quantity']}}</td>
                 <td>
                     {{$value['totalPriceWithVat']}} €</td>
+                <td>
+                    <form action="{{route('cartDelete')}}" method="post">
+                        @method('DELETE')
+                        @csrf
+                        <input type="hidden" value="{{$value['product']->id}}" name="id" >
+                        <input class="text-bold text-danger" type="submit" value="X">
+
+                    </form></td>
             </tr>
                 @endforeach
             @endif
@@ -44,6 +53,11 @@
                     <p class="text-dark">
                         Total : {{$totalPriceCart}} €
                     </p>
+                    <form action="/cart/destroy" method="post">
+                        @csrf
+                        <input class="btn btn-danger" type="submit" value="Vider le panier">
+                    </form>
+
                     <form action="" method="post">
                         <input class="btn btn-success" type="button" value="Valider le panier" name="submitCart">
                     </form>
