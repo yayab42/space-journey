@@ -17,7 +17,7 @@ class CartController extends Controller
         $cart = session('cart');
         $cartArray = [];
         $totalPriceCart = 0;
-
+        if (!empty($cart)){
         foreach ($cart as $id => $qte) {
             // Récupération d'un article dans la BDD
             $product = Product::find($id);
@@ -32,6 +32,7 @@ class CartController extends Controller
 
             // Calcul du prix total du panier
             $totalPriceCart += $totalPriceWithVat;
+        }
         }
 
         // Transmission a la vue Cart du tableau 'cartArray' et du calcul d prix total panier
@@ -91,7 +92,7 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        //UPDATE
     }
 
     /**

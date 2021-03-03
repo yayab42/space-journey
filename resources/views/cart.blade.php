@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
     <div class="container">
-        <h1>PANIER</h1>
+        <h1 class="text-dark">PANIER</h1>
         <table class="table">
             <thead>
             <tr>
@@ -13,9 +13,11 @@
             </tr>
             </thead>
             <tbody>
-            {{--    Si $Session n'est pas vide alors on fait un foreach on parcourt le tableau avec toutes les données --}}
 
-            @if(!empty($cartArray))
+            {{--    Si $Session n'est pas vide alors on fait un foreach on parcourt le tableau avec toutes les données --}}
+            @if($totalPriceCart==0)
+                <h1 class="text-dark">Votre panier est vide :(</h1>
+            @elseif(!empty($cartArray))
                 @foreach($cartArray as $key => $value)
 
             <tr>
