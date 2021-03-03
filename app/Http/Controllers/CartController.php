@@ -93,10 +93,12 @@ class CartController extends Controller
             $cart[$id] = $newQuantity;
             session()->put('cart', $cart);
             if ($newQuantity==0){
-                //delete($id);
+                return $this->delete($request);
+            }
+            else {
+                return redirect()->action([CartController::class, 'index']);
             }
     }
-        return redirect()->action([CartController::class, 'index']);
     }
 
     /**
