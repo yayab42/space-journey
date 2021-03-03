@@ -13,21 +13,29 @@ class CartController extends Controller
      */
     public function index(Product $product)
     {
+        // Récupération de l''id' et 'quantity' stocké dans session
         $cart = session('cart');
         $cartArray = [];
+        $totalPriceCart = 0;
 
         foreach ($cart as $id => $qte) {
+            // Récupération d'un article dans la BDD
             $product = Product::find($id);
-            $totalPriceCart = 0;
+            // Calcul du prix total d'une ligne du panier
+            $totalPriceWithVat = $qte * $product->PriceWithVat;
+            // Construction du panier
             $cartArray[] = [
                 'product' => $product,
                 'quantity' => $qte,
-                'totalPriceWithVat' => ($qte * $product->PriceWithVat),
-                'totalPriceCart' => $totalPriceCart += ($qte * $product->PriceWithVat),
+                'totalPriceWithVat' => $totalPriceWithVat,
             ];
+
+            // Calcul du prix total du panier
+            $totalPriceCart += $totalPriceWithVat;
         }
 
-        return view('cart', ['cartArray' => $cartArray]);
+        // Transmission a la vue Cart du tableau 'cartArray' et du calcul d prix total panier
+        return view('cart', ['cartArray' => $cartArray, 'totalPriceCart' => $totalPriceCart]);
 
     }
 
