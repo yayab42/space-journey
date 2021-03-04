@@ -18,22 +18,22 @@ class CartController extends Controller
         $cart = session('cart');
         $cartArray = [];
         $totalPriceCart = 0;
-        if (!empty($cart)){
-        foreach ($cart as $id => $qte) {
-            // Récupération d'un article dans la BDD
-            $product = Product::find($id);
-            // Calcul du prix total d'une ligne du panier
-            $totalPriceWithVat = $qte * $product->PriceWithVat;
-            // Construction du panier
-            $cartArray[] = [
-                'product' => $product,
-                'quantity' => $qte,
-                'totalPriceWithVat' => $totalPriceWithVat,
-            ];
+        if (!empty($cart)) {
+            foreach ($cart as $id => $qte) {
+                // Récupération d'un article dans la BDD
+                $product = Product::find($id);
+                // Calcul du prix total d'une ligne du panier
+                $totalPriceWithVat = $qte * $product->PriceWithVat;
+                // Construction du panier
+                $cartArray[] = [
+                    'product' => $product,
+                    'quantity' => $qte,
+                    'totalPriceWithVat' => $totalPriceWithVat,
+                ];
 
-            // Calcul du prix total du panier
-            $totalPriceCart += $totalPriceWithVat;
-        }
+                // Calcul du prix total du panier
+                $totalPriceCart += $totalPriceWithVat;
+            }
         }
 
         // Transmission a la vue Cart du tableau 'cartArray' et du calcul d prix total panier
@@ -88,17 +88,14 @@ class CartController extends Controller
         $cart = session('cart');
         $id = $request->input('id');
         $newQuantity = $request->input('quantity');
-        $update = $request->input('modifier');
-        if(isset($update)){
-            $cart[$id] = $newQuantity;
-            session()->put('cart', $cart);
-            if ($newQuantity==0){
-                return $this->delete($request);
-            }
-            else {
-                return redirect()->action([CartController::class, 'index']);
-            }
-    }
+        $cart[$id] = $newQuantity;
+        session()->put('cart', $cart);
+        if ($newQuantity == 0) {
+            return $this->delete($request);
+        } else {
+            return redirect()->action([CartController::class, 'index']);
+        }
+
     }
 
     /**

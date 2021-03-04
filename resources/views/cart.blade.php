@@ -29,7 +29,8 @@
                             {{$value['product']->PriceWithVat}} €
                         </td>
                         <td>
-                            <form method="post" action="/cartUpdate">
+                            <form method="post" action="{{route('cart.update')}}">
+                                @method('PUT')
                                 @csrf
                                 <input type="hidden" value="{{$value['product']->id}}" name="id">
                                 <input type="number" id="quantity" name="quantity" min="0"
