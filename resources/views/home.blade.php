@@ -101,12 +101,12 @@
             <div class="col-lg-3 col-6">
                 <img src="/img/safe.svg" alt="" class="img-fluid">
                 <p class="text-center">
-                    Seulement 56% de taux d’accidents </p>
+                    Seulement 58% de taux d’accidents </p>
             </div>
         </div>
 
         <h1 class="text-center pb-5 pt-5">Nos outils</h1>
-        <p class="text-center">Voyager dans l’espace c’est bien mais survire c’est mieux ! L'espace est remplis de
+        <p class="text-center">Voyager dans l’espace c’est bien mais survire c’est mieux ! L'espace est rempli de
             créature vivantes et bien souvent malveillantes... Pensez
             bien à acheter nos outils pour pouvoir vous en sortir et profiter pleinement de votre
             aventure !
