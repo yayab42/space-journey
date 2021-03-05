@@ -43,6 +43,11 @@
                     <a href="/login" class="img-hover-zoom">
                         <img class="nav-link" src="/img/login.svg" alt="login">
                     </a>
+                    @if(Auth::check())
+                    <p>Bonjour {{Auth::user()['name']}}</p>
+                    @else
+                        <p>Vou zête pas connecT</p>
+                    @endif
                 </div>
                 <div class="nav-item">
                     <a href="/cart" class="img-hover-zoom">

@@ -33,3 +33,4 @@ class OrderController extends Controller
     }
 
 }
+//$user = Auth::user()['name'];
