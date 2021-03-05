@@ -68,7 +68,7 @@
                         <input class="btn btn-danger" type="submit" value="Vider le panier">
                     </form>
 
-                    <form action="/dashboard" method="get">
+                    <form action="/dashboard/cart" method="get">
                         @csrf
                         <input class="btn btn-success" type="submit" value="Valider le panier" name="submitCart">
                     </form>
