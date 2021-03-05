@@ -28,8 +28,6 @@ Route::post('cart/destroy',[CartController::class, 'destroy']);
 //    return view('welcome');
 //});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [\App\Http\Controllers\OrderController::class, 'AddToBdd']) ->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';

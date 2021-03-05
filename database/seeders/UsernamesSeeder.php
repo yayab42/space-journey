@@ -14,8 +14,6 @@ class UsernamesSeeder extends Seeder
      */
     public function run()
     {
-        Username::factory()
-            ->count(10)
-            ->create();
+//
     }
 }
