@@ -46,6 +46,8 @@
                 <x-button class="ml-3">
                     {{ __('Log in') }}
                 </x-button>
+                    <a class="ml-3 underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                    {{ __('Je veux creer un compte') }}
             </div>
         </form>
     </x-auth-card>

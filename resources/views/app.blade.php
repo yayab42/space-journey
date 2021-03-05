@@ -40,7 +40,7 @@
             </div>
             <div class="collapse navbar-collapse col-lg-4 justify-content-around" id="navbarCenteredExample">
                 <div class="nav-item">
-                    <a href="/" class="img-hover-zoom">
+                    <a href="/login" class="img-hover-zoom">
                         <img class="nav-link" src="/img/login.svg" alt="login">
                     </a>
                 </div>
