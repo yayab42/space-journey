@@ -26,7 +26,7 @@
     <div class="container pt-5 pb-5">
 
 
-        <h1 class="text-center pb-5">Nos destinations</h1>
+        <h1 class="text-center pb-5">Nos destinations !</h1>
         <p class="text-justify pb-5 ">Hello jeune terrien ! Vous êtes un backpacker de l’extrème et vous avez soif
             d’aventure ? Vous trouvez les destinations terriennes fades ?
             <br> Découvrez notrer selection de voyage dans les contrès les plus incroyables de la galaxie.
